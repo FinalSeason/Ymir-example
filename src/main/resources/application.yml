@@ -1,0 +1,5 @@
+ymir:
+  zookeeper:
+    url: localhost:2181
+    connectionTimeout: 30000
+    sessionTimeout: 30000
