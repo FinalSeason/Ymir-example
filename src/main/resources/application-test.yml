@@ -3,3 +3,6 @@ ymir:
     url: localhost:2181
     connectionTimeout: 30000
     sessionTimeout: 30000
+
+test:
+  key: 123
