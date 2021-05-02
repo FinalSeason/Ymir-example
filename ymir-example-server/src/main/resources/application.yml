@@ -1,0 +1,8 @@
+ymir:
+  zookeeper:
+    url: 150.158.214.232:2181
+    connectionTimeout: 30000
+    sessionTimeout: 30000
+
+test:
+  key: 123
