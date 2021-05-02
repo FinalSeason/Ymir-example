@@ -1,6 +1,6 @@
 ymir:
   zookeeper:
-    url: localhost:2181
+    url: 150.158.214.232:2181
     connectionTimeout: 30000
     sessionTimeout: 30000
 

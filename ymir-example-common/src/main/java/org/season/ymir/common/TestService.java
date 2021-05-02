@@ -1,4 +1,4 @@
-package org.season.ymir.example;
+package org.season.ymir.common;
 
 /**
  * TODO
