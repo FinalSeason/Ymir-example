@@ -1,0 +1,2 @@
+test1=org.season.ymir.example.client.spitest.TestInterfaceImpl1
+test2=org.season.ymir.example.client.spitest.TestInterfaceImpl2
