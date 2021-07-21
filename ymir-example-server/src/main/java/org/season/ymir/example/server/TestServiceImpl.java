@@ -1,8 +1,8 @@
 package org.season.ymir.example.server;
 
 
-import org.season.ymir.client.annotation.YmirService;
 import org.season.ymir.common.TestService;
+import org.season.ymir.core.annotation.YmirService;
 
 /**
  * TODO
@@ -13,6 +13,11 @@ import org.season.ymir.common.TestService;
 public class TestServiceImpl implements TestService {
     @Override
     public String test(String name) {
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello "+name;
     }
 }

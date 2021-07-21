@@ -1,7 +1,7 @@
 package org.season.ymir.example.client.controller;
 
-import org.season.ymir.client.annotation.YmirReference;
 import org.season.ymir.common.TestService;
+import org.season.ymir.core.annotation.YmirReference;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
