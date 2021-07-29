@@ -13,11 +13,12 @@ import org.season.ymir.core.annotation.YmirService;
 public class TestServiceImpl implements TestService {
     @Override
     public String test(String name) {
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("接口被调用");
         return "Hello "+name;
     }
 }
