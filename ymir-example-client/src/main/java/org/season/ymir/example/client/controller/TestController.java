@@ -1,10 +1,16 @@
 package org.season.ymir.example.client.controller;
 
+import org.season.ymir.common.TestResponse;
 import org.season.ymir.common.TestService;
-import org.season.ymir.core.annotation.YmirReference;
+import org.season.ymir.core.annotation.Reference;
+import org.season.ymir.core.context.RpcContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 /**
  * TODO
@@ -14,11 +20,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @YmirReference
-    private TestService service;
+    @Reference(check = true, timeout = 20000)
+    private TestService testService;
+
+    @Autowired
+    private Map<String, TestInterface> maps;
 
     @PostMapping("/name")
-    public String get(@RequestParam("name") String name){
-        return service.test(name);
+    public TestResponse get(@RequestBody TestResponse name){
+        RpcContext.getContext().setAttachments(name.getName(), name.getAge()+"");
+        return testService.test(name);
+    }
+
+    @PostMapping("/test")
+    public String test(@RequestParam("name") String name){
+        return maps.get(name).test();
     }
 }

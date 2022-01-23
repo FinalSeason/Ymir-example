@@ -7,5 +7,5 @@ package org.season.ymir.common;
  */
 public interface TestService {
 
-    String test(String name);
+    TestResponse test(TestResponse name);
 }
